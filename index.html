@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,900;1,900&family=Work+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Card Grid Excercise</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="header-text gradient-background">Harry Potter Characters</h1>
+      </div>
+
+      <div class="cards-wrapper">
+        <div class="card-border">
+
+          <div class="card">
+            <div class="img-container border-gradient border-gradient-purple">
+              <img
+                src="https://pm1.narvii.com/6336/ce3e4689a0013bdb3f77c0f92978d01544297f90_hq.jpg"
+                alt="Harry Potter"
+              />
+            </div>
+            <section class="card-body">
+              <h2 class="small-caps title">Harry Potter</h2>
+              <ul class="card-list">
+                <li><span class="small-caps">House</span> <span>Gryffindor</span></li>
+                <li><span class="small-caps">Birthday</span> <span>31-07-1980</span></li>
+                <li><span class="small-caps">Eye color</span> <span>Green</span></li>
+                <li><span class="small-caps">Patronus</span> <span>Stag</span></li>
+              </ul>
+            </section>
+            <a class="card-button animated-border" href="#openModal-harry">
+              Detail
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="img-container border-gradient border-gradient-purple">
+              <img
+                src="https://harryspain.files.wordpress.com/2009/04/hermione.jpg"
+                alt="Hermione"
+              />
+            </div>
+            <section class="card-body">
+              <h2 class="small-caps title">Hermione</h2>
+              <ul class="card-list">
+                <li><span class="small-caps">House</span> <span>Gryffindor</span></li>
+                <li><span class="small-caps">Birthday</span> <span>19-09-1979</span></li>
+                <li><span class="small-caps">Eye color</span> <span>Brown</span></li>
+                <li><span class="small-caps">Patronus</span> <span>Otter</span></li>
+              </ul>
+            </section>
+            <a class="card-button animated-border" href="#openModal-hermione">
+              Detail
+            </a>
+          </div>
+
+
+
+        <div class="card">
+            <div class="img-container border-gradient border-gradient-purple">
+              <img
+                src="https://images.hdqwalls.com/download/house-elf-dobby-in-harry-potter-and-fantastic-beasts-2-4k-hc-1366x768.jpg"
+                alt="Dobby"
+              />
+            </div>
+            <section class="card-body">
+              <h2 class="small-caps title">Dobby</h2>
+              <ul class="card-list">
+                <li><span class="small-caps">House</span> <span>Elf</span></li>
+                <li><span class="small-caps">Birthday</span> <span>unknown</span></li>
+                <li><span class="small-caps">Eye color</span> <span>Blue</span></li>
+                <li><span class="small-caps">Fav garment</span> <span>Socks</span></li>
+              </ul>
+            </section>
+            <a class="card-button animated-border" href="#openModal-dobby">
+              Detail
+            </a>
+          </div>
+        </div>
+        <div class="footer">
+          <p>Made with <span title="lof">♥</span> by <a href="https://github.com/EFdez">EFdez</a>.</p>
+      </div>
+      </div>
+    </div>
+
+
+
+    <div id="openModal-harry" class="modal-dialog">
+      <div class="gradient-background">
+        <a href="#close" title="Close" class="close">X</a>
+        <div class="modal-container">
+          <div class="modal-img">
+            <img
+              src="https://img-9gag-fun.9cache.com/photo/aRr6qb7_460s.jpg"
+              alt="Harry Potter"
+            />
+          </div>
+          <div class="modal-text">
+            <blockquote>
+                <p>Born a wizard, raised a muggle.</p>
+            </blockquote>
+            <h2>Harry Potter</h2>
+            <p>
+               Has a scar that warns him of danger and also gives him a rebel allure. His green eyes changes throughout the movies until they take on a nice shade of blue. Spends the last three or four books being moody.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="openModal-hermione" class="modal-dialog">
+        <div class="gradient-background">
+          <a href="#close" title="Close" class="close">X</a>
+          <div class="modal-container">
+            <div class="modal-img">
+              <img
+                src="http://3.bp.blogspot.com/_usWSxRPtkXM/SkP0Eulj_MI/AAAAAAAAABM/Es7Jz8ea6rc/s1600/1747059640_small.jpg"
+                alt="Hermione"
+              />
+            </div>
+            <div class="modal-text">
+              <blockquote>
+                  <p>And, like gorillas, we all walk.</p>
+              </blockquote>
+              <h2>Hermione</h2>
+              <p>
+                A wild rumbera who doesn't neglect her studies. Didn't hesitate to <span class="italic">obliviate</span> her parents so they would forget <a href="https://www.youtube.com/watch?v=WhmzK_CrIXo&ab_channel=sear118" target="_blank">her childhood hits</a>. Hates the coolest Hogwart's professor Sybill Trellawney.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="openModal-dobby" class="modal-dialog">
+        <div class="gradient-background">
+          <a href="#close" title="Close" class="close">X</a>
+          <div class="modal-container">
+            <div class="modal-img">
+              <img
+                src="https://www.naiz.eus/media/asset_publics/resources/000/844/804/article_main_vertical/Fito.jpg"
+                alt="Dobby"
+              />
+            </div>
+            <div class="modal-text">
+              <blockquote>
+                  <p>Socks as a form of freedom.</p>
+              </blockquote>
+              <h2>Dobby</h2>
+              <p>
+                 A little bit too much obsessed with Harry Potter. His fans are still living in the 90s, never got over Platero and you. Great, even if unnoticed, guitarist. Saddest cinematic death ever.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>

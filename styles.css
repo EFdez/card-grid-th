@@ -1,0 +1,379 @@
+:root {
+  --primary-color: #8a52b5;
+  --secondary-color: #6badda;
+  --tertiary-color: #f798d0;
+  --bg-light-color: #c2cad0;
+  --bg-dark-color: #27272cf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  background: var(--bg-dark-color);
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+
+.small-caps {
+  font-variant: small-caps;
+  font-weight: 900;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 20px;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  height: 450px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.37);
+  margin: 2rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  background: #27272c;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.img-container {
+  width: 100%;
+  height: 150px;
+}
+
+.img-container > img {
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 145px;
+  filter: grayscale(100%);
+  object-position: 50% 20%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem;
+  min-height: 180px;
+}
+
+.card-body > .title {
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+
+.card-list {
+  padding-top: 1rem;
+  width: 100%;
+  padding: 1rem 0;
+  overflow-x: clip;
+  list-style: none;
+}
+
+.card-list > li {
+  margin-bottom: 0.7rem;
+}
+
+.card-list li:before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content: "• • • • • • • • • • • • • • • • • • • • "
+    "• • • • • • • • • • • • • • • • • • • • "
+    "• • • • • • • • • • • • • • • • • • • • "
+    "• • • • • • • • • • • • • • • • • • • • ";
+}
+
+.card-list span:first-child {
+  padding-right: 0.33em;
+  background: var(--bg-dark-color);
+}
+
+.card-list span + span {
+  float: right;
+  padding-left: 0.33em;
+  background: var(--bg-dark-color);
+}
+
+.gradient-background {
+  background: linear-gradient(
+    -45deg,
+    var(--primary-color),
+    var(--tertiary-color),
+    var(--secondary-color)
+  );
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+.header-text {
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6vw;
+  text-align: center;
+  letter-spacing: -3px;
+}
+
+.border-gradient {
+  border-bottom: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(
+    13deg,
+    var(--primary-color) 0%,
+    var(--tertiary-color),
+    var(--secondary-color) 100%
+  );
+}
+
+.animated-border {
+  border: 0.7vmin solid;
+  --angle: 0deg;
+  border-image: linear-gradient(
+      var(--angle),
+      var(--tertiary-color),
+      var(--secondary-color)
+    )
+    1;
+  animation: 6s rotate linear infinite;
+}
+
+.card-button {
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  background: var(--bg-dark-color);
+  color: white;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.card-button:active {
+  transform: scale(1.1);
+}
+
+.modal-dialog {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+}
+
+.modal-dialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-dialog > div {
+  max-width: 1280px;
+  width: 90%;
+  min-height: 500px;
+  position: relative;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 1%;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.modal-img {
+  background-color: #c2cad0;
+  width: 40%;
+  transition: filter 1s ease-in;
+  filter: blur(12px);
+}
+
+.modal-img > img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  /* animation: blur 2s ease; */
+}
+
+.modal-dialog:target .modal-img {
+    filter: blur(0px);
+  }
+  
+
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  background-color: white;
+  padding: 4rem;
+  color: black;
+}
+
+.modal-text > p {
+  line-height: 1.5rem;
+}
+
+.modal-text a {
+    color: inherit;
+}
+
+.modal-text > h2 {
+  margin-bottom: 0;
+}
+
+.modal-text > blockquote > p {
+  font-family: "Raleway";
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-align: right;
+  font-style: italic;
+}
+
+.close {
+  background: var(--tertiary-color);
+  color: #fff;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 34px;
+  height: 34px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+  padding-top: 5px;
+}
+
+.close:hover {
+  background: var(--primary-color);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 2rem;
+  font-size: 13px;
+  color: var(--bg-light-color);
+}
+
+.footer p {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.footer span {
+  color: var(--tertiary-color);
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--bg-light-color);
+}
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
